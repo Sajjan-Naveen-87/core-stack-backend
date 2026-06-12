@@ -197,8 +197,7 @@ def clip_block_from_admin_boundary(state, district, block):
 
     # Create the directory for state if doesn't exist already
     state_dir = os.path.join(ADMIN_BOUNDARY_OUTPUT_DIR, state.replace(" ", "_"))
-    if not os.path.exists(state_dir):
-        os.mkdir(state_dir)
+    os.makedirs(state_dir, exist_ok=True)
 
     # Creating the feature collection out of the features list built in the previous cell
     collection = FeatureCollection(features)
