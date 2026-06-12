@@ -48,3 +48,9 @@ users/migrations/*.py
 
 */migrations/*.py
 */migrations/__pycache__/
+
+#keys
+core-stack-key.json
+
+
+.installation_state
